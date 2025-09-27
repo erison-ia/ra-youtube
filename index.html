@@ -1,0 +1,61 @@
+<!doctype html> 
+
+<html> 
+
+<head> 
+
+  <meta charset="utf-8" /> 
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" /> 
+
+  <title>RA - Vídeo YouTube</title> 
+
+  
+
+  <!-- A-Frame --> 
+
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script> 
+
+  
+
+  <!-- AR.js (A-Frame build) --> 
+
+  <script src="https://cdn.rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> 
+
+  
+
+  <!-- Afame YouTube component (permite usar YouTube como textura) --> 
+
+  <script src="https://unpkg.com/aframe-youtube-component@3.0.1/dist/aframe-youtube-component.min.js"></script> 
+
+  
+
+  <style> body { margin: 0; overflow: hidden; } </style> 
+
+</head> 
+
+<body> 
+
+  <!-- A-scene com AR.js (usa webcam do dispositivo) --> 
+
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;"> 
+
+     
+
+    <!-- Marcador customizado (arquivo meuMarker.patt no mesmo diretório) --> 
+
+    <a-marker type="pattern" url="meuMarker.patt"> 
+
+      <a-entity  
+
+         youtube="videoId: 28lYY6lFsB4; autoplay: 1; loop: 0; controls: 1"  
+
+         geometry="primitive: plane; width: 1; height: 0.5625" 
+
+         rotation="-90 0 0" 
+
+         position="0 0 0"> 
+
+      </a-entity> 
+
+    </a-marker> 
